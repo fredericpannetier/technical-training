@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top menu item -->
+    <menuitem id="menu_academy" name="Academy" sequence="200"/>
+        <menuitem id="menu_academy_courses" name="Courses" sequence="10" parent="" action="openacademy.action_academy_course" />
+</odoo>

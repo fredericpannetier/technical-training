@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_course_tree" model="ir.ui.view" >
+            <field name="name">course.tree</field>
+            <field name="priority">1</field>
+            <field name="model">openacademy.course</field>        
+            <field name="arch" type="xml">
+                <tree string="Course" default_order = "name"  import="false" create="true">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="level"/>
+                    <field name="session_count"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="action_academy_course" model="ir.actions.act_window">
+        <field name="name">Course</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">openacademy.course</field>
+        <field name="view_type">form</field>
+        <field name="search_view_id" ref="view_course_tree"/>              
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Help
+            </p>
+            <p>
+                Listing of the courses.
+            </p>
+        </field>
+    </record>
+</odoo>
