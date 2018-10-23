@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="partner_contact_view" model="ir.ui.view">
+            <field name="name">partner_contact</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority">99</field>
+            <field name="arch" type="xml">
+                <!-- find field description and add the field
+                     idea_ids after it -->
+                <xpath expr="//group[@name='purchase']" position="before">
+                    <!-- On pourrait écrire
+                        <xpath expr="//group[@name='purchase']/field[@name='supplier']/.." position="before">
+                    -->
+                    <group>
+                        <field name="instructor" string="Is instructor"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='barcode']" position="before">
+                    
+                  <field name="session_ids" string="Sessions" attrs="{'readonly': True}"/>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
