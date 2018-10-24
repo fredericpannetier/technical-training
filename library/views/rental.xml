@@ -7,12 +7,19 @@
             <field name="model">library.rental</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <button name="action_return" type="object" string="Return book" class="oe_highlight" attrs="{'invisible': [('payment_id','!=',False)]}"/>
+                        <button name="action_lost" string="Book is lost" type="object"  class="oe_highlight" attrs="{'invisible': [('payment_id','!=',False)]}"/>
+                    
+                    </header>
+                    
                     <sheet>
                         <group>
                             <field name="customer_id" context="{'default_customer': True}"/>
                             <field name="book_id" context="{'default_book': True}"/>
                             <field name="rental_date"/>
                             <field name="return_date"/>
+                            <field name="payment_id"/>
                         </group>
                     </sheet>
                 </form>

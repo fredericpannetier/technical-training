@@ -20,3 +20,10 @@ class Partner(models.Model):
         'Nationality',
     )
     birthdate =  fields.Date('Birthdate',)
+    payment_ids = fields.One2many('library.payments', 'customer_id', string="Payments")
+    payment_count = fields.Integer("Number of payments", compute="_get_payment_count", store=False)
+    
+    @api.depends('session_ids')
+    def _get_payment_count(self):
+        for partner in self:
+            partner.payment_count = len(partner.payment_ids)
