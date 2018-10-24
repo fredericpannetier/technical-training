@@ -22,7 +22,20 @@ class TaskType(models.Model):
     description = fields.Text()
     area = fields.Char()
     active = fields.Boolean(default=True)
-
+    
+    @api.multi
+    def name_get(self):
+        
+        result = []
+        for record in self:
+            if not record.description:
+                name = record.name
+            else:
+                name = record.name + ' (' + record.description + ')'
+            result.append((record.id, name))
+        return result
+    
+    
 
 class DayNumber(models.Model):
     _name = 'coopplanning.daynumber'
