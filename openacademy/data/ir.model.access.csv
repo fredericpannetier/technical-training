@@ -1,0 +1,12 @@
+id,name,group_id/id,model_id/id,perm_read,perm_create,perm_unlink,perm_write
+openacademy_maester_responsible,openacademy.maester/responsible,openacademy.maester,base.model_res_users,True,False,False,False
+openacademy_maester_session,openacademy.maester/session,openacademy.maester,openacademy.model_openacademy_session,True,False,False,True
+openacademy_maester_course,openacademy.maester/course,openacademy.maester,openacademy.model_openacademy_course,True,True,False,True
+openacademy_maester_partner,openacademy.maester/partner,openacademy.maester,base.model_res_partner,True,False,False,False
+openacademy_futurmaester_session,openacademy.futurmaester/session,openacademy.futur_maester,openacademy.model_openacademy_session,True,False,False,True
+openacademy_futurmaester_course,openacademy.futurmaester/course,openacademy.futur_maester,openacademy.model_openacademy_course,True,False,False,True
+openacademy_futurmaester_partner,openacademy.futurmaester/partner,openacademy.futur_maester,base.model_res_partner,True,False,False,False
+openacademy_responsible_responsible,openacademy.responsible/responsible,openacademy.responsible,base.model_res_users,True,True,True,True
+openacademy_responsible_session,openacademy.responsible/session,openacademy.responsible,openacademy.model_openacademy_session,True,True,True,True
+openacademy_responsible_course,openacademy.responsible/course,openacademy.responsible,openacademy.model_openacademy_course,True,True,True,True
+openacademy_responsible_partner,openacademy.responsible/partner,openacademy.responsible,base.model_res_partner,True,True,True,True

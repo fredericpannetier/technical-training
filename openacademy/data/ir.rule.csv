@@ -1,0 +1,2 @@
+id,name,groups/id,model_id/id,perm_read,perm_create,perm_unlink,perm_write,domain_force
+academy_futurmaester_attendee,academy_futurmaester_attendee,openacademy.futur_maester,base.model_res_partner,True,False,False,False,"[('id', '=', user.commercial_partner_id.id)]"

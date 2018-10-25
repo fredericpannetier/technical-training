@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="res.groups" id="futur_maester">
+            <field name="category_id" ref="base.module_category_academy"/>
+            <field name="full name">Academy / Futurs maesters</field>
+            <field name="name">Futurs maesters</field>
+        </record>
+        
+        <record model="res.groups" id="maester">
+            <field name="category_id" ref="base.module_category_academy"/>
+            <field name="full name">Academy / Maesters</field>
+            <field name="name">Maesters</field>
+        </record>
+        
+        <record model="res.groups" id="responsible">
+            <field name="category_id" ref="base.module_category_academy"/>
+            <field name="full name">Academy / Responsible</field>
+            <field name="name">Responsible</field>
+        </record>
+    </data>
+</odoo>
+
+
